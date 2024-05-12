@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+
+# Create symbolic link for libsecp256k1. Would possibly be preferable as a patch?
+ln -sf /usr/lib/x86_64-linux-gnu/libsecp256k1.so.1.0.0 /usr/lib/x86_64-linux-gnu/libsecp256k1.so.0 || true

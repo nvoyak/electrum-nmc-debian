@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+# Ignore graphics and .mo files in addition to the default debian files
+DEB_COPYRIGHT_CHECK_IGNORE_REGEX = ^(locale/.*/.*\.mo|data/dark/.*\.png|icons/.*\.png|LICENSE|debian/(changelog|copyright(|_hints|_newhints)|electrum.translations))$
+
+%:
+	dh $@ --buildsystem=pybuild
+
+override_dh_installchangelogs::
+	dh_installchangelogs -k RELEASE-NOTES
+
+execute_after_dh_auto_install::
+	rm debian/tmp/usr/lib/python3*/dist-packages/electrum_nmc/electrum/plugins/revealer/DejaVuSansMono-Bold.ttf
+
+execute_before_dh_python3::
+# The dependency is inconvenient and unnecessary (say the electrum devs, probably true!)
+	sed -Ei -e '/^qdarkstyle/d' debian/python3-electrum-nmc/usr/lib/python3*/dist-packages/*.egg-info/requires.txt

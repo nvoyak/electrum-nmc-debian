@@ -1,0 +1,5 @@
+Description: Fix aiorpcx field
+From: Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>
+
+--- a/electrum_nmc/electrum/util.py
++++ b/electrum_nmc/electrum/util.py

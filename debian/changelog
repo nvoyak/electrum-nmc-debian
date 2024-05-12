@@ -1,0 +1,6 @@
+electrum-nmc (4.0.6-1) UNRELEASED; urgency=low
+
+  * Initial Release.
+  * Based on Debian Cryptocoin Team electrum package 4.0.9-1 and Lola Rigaut-Luczak's work.
+
+ -- Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>  Sat, 11 May 2024 17:36:10 -0300

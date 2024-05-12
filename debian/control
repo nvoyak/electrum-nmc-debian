@@ -1,0 +1,80 @@
+Source: electrum-nmc
+Maintainer: Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>
+Section: utils
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               devscripts,
+               dh-sequence-python3,
+               libsecp256k1-1,
+               pyqt5-dev-tools,
+               python3,
+               python3-aiohttp (>= 3.3.0),
+               python3-aiohttp (<< 4.0.0),
+               python3-aiohttp-socks (>= 0.3),
+               python3-aiorpcx (>= 0.18.7),
+               python3-attr (>= 19.2.0),
+               python3-bitstring,
+               python3-certifi,
+               python3-cryptography,
+               python3-dnspython,
+               python3-ecdsa (>= 0.14),
+               python3-pbkdf2,
+               python3-protobuf (>= 3.12),
+               python3-protobuf (<< 4),
+               python3-pyaes,
+               python3-pyqt5,
+               python3-qrcode,
+               python3-setuptools
+Standards-Version: 4.5.1
+Homepage: https://www.namecoin.org/docs/electrum-nmc/
+Rules-Requires-Root: no
+
+Package: python3-electrum-nmc
+Architecture: all
+Section: python
+Depends: libsecp256k1-1,
+         python3-cryptography (>= 2.1),
+         ${misc:Depends},
+         ${python3:Depends}
+Recommends: fonts-dejavu-core
+Description: Easy to use Namecoin client - Python module
+ This package provides a lightweight Namecoin client which protects
+ you from losing your namecoins or names in a backup mistake or computer
+ failure. Also, Electrum-NMC does not require waiting time because it does
+ not download the Namecoin blockchain.
+ .
+ This package provides the "electrum_nmc" Python module which can be used to access
+ a Namecoin wallet from Python programs.
+
+Package: electrum-nmc
+Architecture: all
+Depends: python3-electrum-nmc (= ${binary:Version}),
+         ${misc:Depends},
+         ${python3:Depends}
+Recommends: python3-pyqt5, python3-qdarkstyle
+Suggests: python3-btchip, python3-trezor, python3-zbar
+Description: Easy to use Namecoin client
+ This package provides a lightweight Namecoin client which protects
+ you from losing your namecoins or names in a backup mistake or computer
+ failure. Also, Electrum-NMC does not require waiting time because it does
+ not download the Namecoin blockchain.
+ .
+ Features of Electrum-NMC:
+ .
+   * Instant on: Your client does not download the blockchain. It uses a
+     network of specialized servers that index the blockchain.
+   * Forgiving: Your wallet can be recovered from a secret seed.
+   * Safe: Your seed and private keys are encrypted on your hard drive.
+     They are never sent to the servers.
+   * Low trust: Information received from the servers is verified using
+     SPV. Servers are authenticated using SSL.
+   * No downtimes: Your client is not tied to a particular server; it
+     will switch instantly if your server is down.
+   * Ubiquitous: You can use the same wallet on different computers, they
+     will synchronize automatically.
+   * Cold Storage: Sign transactions from a computer that is always
+     offline. Broadcast them using a machine that does not have your keys.
+   * Reachable: You can export your private keys into other Namecoin
+     clients.
+   * Electrum-NMC is open source and is a fork of Electrum, which was
+     first released in November 2011.

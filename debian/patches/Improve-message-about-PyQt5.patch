@@ -1,0 +1,15 @@
+Description: Improve message about PyQt5.
+Origin: https://salsa.debian.org/cryptocoin-team/electrum/
+From: Tristan Seligmann <mithrandi@debian.org>
+
+--- a/electrum_nmc/electrum/gui/qt/__init__.py
++++ b/electrum_nmc/electrum/gui/qt/__init__.py
+@@ -34,7 +34,7 @@
+ try:
+     import PyQt5
+ except Exception:
+-    sys.exit("Error: Could not import PyQt5 on Linux systems, you may try 'sudo apt-get install python3-pyqt5'")
++    sys.exit("Error: Could not import PyQt5; try 'sudo apt install python3-pyqt5'")
+ 
+ from PyQt5.QtGui import QGuiApplication
+ from PyQt5.QtWidgets import (QApplication, QSystemTrayIcon, QWidget, QMenu,
