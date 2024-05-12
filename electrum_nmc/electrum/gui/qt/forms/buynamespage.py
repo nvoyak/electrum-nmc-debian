@@ -1,0 +1,123 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'electrum_nmc/electrum/gui/qt/forms/buynamespage.ui'
+#
+# Created by: PyQt5 UI code generator 5.14.1
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_BuyNamesPage(object):
+    def setupUi(self, BuyNamesPage):
+        BuyNamesPage.setObjectName("BuyNamesPage")
+        BuyNamesPage.resize(776, 364)
+        self.verticalLayout = QtWidgets.QVBoxLayout(BuyNamesPage)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.label_4 = QtWidgets.QLabel(BuyNamesPage)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
+        self.label_4.setSizePolicy(sizePolicy)
+        self.label_4.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_4.setObjectName("label_4")
+        self.verticalLayout.addWidget(self.label_4)
+        self.registerName = QValidatedLineEdit(BuyNamesPage)
+        self.registerName.setObjectName("registerName")
+        self.verticalLayout.addWidget(self.registerName)
+        self.label = QtWidgets.QLabel(BuyNamesPage)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy)
+        self.label.setTextFormat(QtCore.Qt.RichText)
+        self.label.setWordWrap(True)
+        self.label.setOpenExternalLinks(True)
+        self.label.setObjectName("label")
+        self.verticalLayout.addWidget(self.label)
+        self.previewLabel = QtWidgets.QLabel(BuyNamesPage)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.previewLabel.sizePolicy().hasHeightForWidth())
+        self.previewLabel.setSizePolicy(sizePolicy)
+        self.previewLabel.setText("")
+        self.previewLabel.setTextFormat(QtCore.Qt.PlainText)
+        self.previewLabel.setWordWrap(True)
+        self.previewLabel.setObjectName("previewLabel")
+        self.verticalLayout.addWidget(self.previewLabel)
+        self.checkNameButton = QtWidgets.QPushButton(BuyNamesPage)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.checkNameButton.sizePolicy().hasHeightForWidth())
+        self.checkNameButton.setSizePolicy(sizePolicy)
+        self.checkNameButton.setMinimumSize(QtCore.QSize(150, 0))
+        self.checkNameButton.setObjectName("checkNameButton")
+        self.verticalLayout.addWidget(self.checkNameButton)
+        self.statusLabel = QtWidgets.QLabel(BuyNamesPage)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.statusLabel.sizePolicy().hasHeightForWidth())
+        self.statusLabel.setSizePolicy(sizePolicy)
+        self.statusLabel.setText("")
+        self.statusLabel.setTextFormat(QtCore.Qt.PlainText)
+        self.statusLabel.setWordWrap(True)
+        self.statusLabel.setObjectName("statusLabel")
+        self.verticalLayout.addWidget(self.statusLabel)
+        self.registerNameButton = QtWidgets.QPushButton(BuyNamesPage)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.registerNameButton.sizePolicy().hasHeightForWidth())
+        self.registerNameButton.setSizePolicy(sizePolicy)
+        self.registerNameButton.setMinimumSize(QtCore.QSize(150, 0))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/icons/send"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.registerNameButton.setIcon(icon)
+        self.registerNameButton.setDefault(True)
+        self.registerNameButton.setObjectName("registerNameButton")
+        self.verticalLayout.addWidget(self.registerNameButton)
+        self.buyNameButton = QtWidgets.QPushButton(BuyNamesPage)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.buyNameButton.sizePolicy().hasHeightForWidth())
+        self.buyNameButton.setSizePolicy(sizePolicy)
+        self.buyNameButton.setMinimumSize(QtCore.QSize(150, 0))
+        self.buyNameButton.setObjectName("buyNameButton")
+        self.verticalLayout.addWidget(self.buyNameButton)
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem)
+        self.label_4.setBuddy(self.registerName)
+
+        self.retranslateUi(BuyNamesPage)
+        QtCore.QMetaObject.connectSlotsByName(BuyNamesPage)
+
+    def retranslateUi(self, BuyNamesPage):
+        _translate = QtCore.QCoreApplication.translate
+        self.label_4.setText(_translate("BuyNamesPage", "&New name:"))
+        self.registerName.setToolTip(_translate("BuyNamesPage", "Enter a name to register it."))
+        self.registerName.setText(_translate("BuyNamesPage", "d/"))
+        self.label.setText(_translate("BuyNamesPage", "Use <strong>d/</strong> prefix for domain names. E.g. <strong>d/mysite</strong> will register <strong>mysite.bit</strong><br>See the <a href=\"https://github.com/namecoin/proposals/blob/master/ifa-0001.md#keys\">Namecoin Domain Names specification</a> for reference. Other prefixes can be used for miscellaneous purposes (not domain names).</p>"))
+        self.checkNameButton.setText(_translate("BuyNamesPage", "&Check name availability…"))
+        self.registerNameButton.setToolTip(_translate("BuyNamesPage", "Register the name."))
+        self.registerNameButton.setText(_translate("BuyNamesPage", "&Register Name…"))
+        self.buyNameButton.setToolTip(_translate("BuyNamesPage", "Buy the name from the current owner."))
+        self.buyNameButton.setText(_translate("BuyNamesPage", "&Buy Name…"))
+from .qvalidatedlineedit import QValidatedLineEdit
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    BuyNamesPage = QtWidgets.QWidget()
+    ui = Ui_BuyNamesPage()
+    ui.setupUi(BuyNamesPage)
+    BuyNamesPage.show()
+    sys.exit(app.exec_())
