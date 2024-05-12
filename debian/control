@@ -11,7 +11,7 @@ Build-Depends: debhelper-compat (= 13),
                python3-aiohttp (>= 3.3.0),
                python3-aiohttp (<< 4.0.0),
                python3-aiohttp-socks (>= 0.3),
-               python3-aiorpcx (>= 0.18.7),
+               python3-aiorpcx (>= 0.18),
                python3-attr (>= 19.2.0),
                python3-bitstring,
                python3-certifi,
@@ -25,7 +25,7 @@ Build-Depends: debhelper-compat (= 13),
                python3-pyqt5,
                python3-qrcode,
                python3-setuptools
-Standards-Version: 4.5.1
+Standards-Version: 4.6.2
 Homepage: https://www.namecoin.org/docs/electrum-nmc/
 Rules-Requires-Root: no
 
@@ -36,7 +36,9 @@ Depends: libsecp256k1-1,
          python3-cryptography (>= 2.1),
          ${misc:Depends},
          ${python3:Depends}
-Recommends: fonts-dejavu-core
+Suggests: fonts-dejavu-core,
+          python3-btchip,
+          python3-trezor
 Description: Easy to use Namecoin client - Python module
  This package provides a lightweight Namecoin client which protects
  you from losing your namecoins or names in a backup mistake or computer
@@ -51,8 +53,11 @@ Architecture: all
 Depends: python3-electrum-nmc (= ${binary:Version}),
          ${misc:Depends},
          ${python3:Depends}
-Recommends: python3-pyqt5, python3-qdarkstyle
-Suggests: python3-btchip, python3-trezor, python3-zbar
+Recommends: python3-pyqt5,
+            python3-qdarkstyle
+Suggests: python3-btchip,
+          python3-trezor,
+          python3-zbar
 Description: Easy to use Namecoin client
  This package provides a lightweight Namecoin client which protects
  you from losing your namecoins or names in a backup mistake or computer
