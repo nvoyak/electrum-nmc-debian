@@ -2,29 +2,30 @@ Source: electrum-nmc
 Maintainer: Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>
 Section: utils
 Priority: optional
-Build-Depends: debhelper-compat (= 13),
-               devscripts,
-               dh-sequence-python3,
-               libsecp256k1-1,
-               pyqt5-dev-tools,
-               python3,
-               python3-aiohttp (>= 3.3.0),
-               python3-aiohttp (<< 4.0.0),
-               python3-aiohttp-socks (>= 0.3),
-               python3-aiorpcx (>= 0.18),
-               python3-attr (>= 19.2.0),
-               python3-bitstring,
-               python3-certifi,
-               python3-cryptography,
-               python3-dnspython,
-               python3-ecdsa (>= 0.14),
-               python3-pbkdf2,
-               python3-protobuf (>= 3.12),
-               python3-protobuf (<< 4),
-               python3-pyaes,
-               python3-pyqt5,
-               python3-qrcode,
-               python3-setuptools
+Build-Depends:
+ debhelper-compat (= 13),
+ devscripts,
+ dh-sequence-python3,
+ libsecp256k1-1,
+ pyqt5-dev-tools,
+ python3,
+ python3-aiohttp (>= 3.3.0),
+ python3-aiohttp (<< 4.0.0),
+ python3-aiohttp-socks (>= 0.3),
+ python3-aiorpcx (>= 0.18),
+ python3-attr (>= 19.2.0),
+ python3-bitstring,
+ python3-certifi,
+ python3-cryptography,
+ python3-dnspython,
+ python3-ecdsa (>= 0.14),
+ python3-pbkdf2,
+ python3-protobuf (>= 3.12),
+ python3-protobuf (<< 4),
+ python3-pyaes,
+ python3-pyqt5,
+ python3-qrcode,
+ python3-setuptools,
 Standards-Version: 4.6.2
 Homepage: https://www.namecoin.org/docs/electrum-nmc/
 Rules-Requires-Root: no
@@ -32,13 +33,12 @@ Rules-Requires-Root: no
 Package: python3-electrum-nmc
 Architecture: all
 Section: python
-Depends: libsecp256k1-1,
-         python3-cryptography (>= 2.1),
-         ${misc:Depends},
-         ${python3:Depends}
-Suggests: fonts-dejavu-core,
-          python3-btchip,
-          python3-trezor
+Depends:
+ libsecp256k1-1,
+ python3-cryptography (>= 2.1),
+ ${misc:Depends},
+ ${python3:Depends},
+Suggests: fonts-dejavu-core, python3-btchip, python3-trezor
 Description: Easy to use Namecoin client - Python module
  This package provides a lightweight Namecoin client which protects
  you from losing your namecoins or names in a backup mistake or computer
@@ -50,14 +50,12 @@ Description: Easy to use Namecoin client - Python module
 
 Package: electrum-nmc
 Architecture: all
-Depends: python3-electrum-nmc (= ${binary:Version}),
-         ${misc:Depends},
-         ${python3:Depends}
-Recommends: python3-pyqt5,
-            python3-qdarkstyle
-Suggests: python3-btchip,
-          python3-trezor,
-          python3-zbar
+Depends:
+ python3-electrum-nmc (= ${binary:Version}),
+ ${misc:Depends},
+ ${python3:Depends},
+Recommends: python3-pyqt5, python3-qdarkstyle
+Suggests: python3-btchip, python3-trezor, python3-zbar
 Description: Easy to use Namecoin client
  This package provides a lightweight Namecoin client which protects
  you from losing your namecoins or names in a backup mistake or computer
