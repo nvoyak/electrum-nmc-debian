@@ -38,7 +38,8 @@ Depends:
  python3-cryptography (>= 2.1),
  ${misc:Depends},
  ${python3:Depends},
-Suggests: fonts-dejavu-core, python3-btchip, python3-trezor
+# python3-btchip and python3-trezor can be useful for hardware wallets.
+Suggests: python3-btchip, python3-trezor
 Description: Easy to use Namecoin client - Python module
  This package provides a lightweight Namecoin client which protects
  you from losing your namecoins or names in a backup mistake or computer
