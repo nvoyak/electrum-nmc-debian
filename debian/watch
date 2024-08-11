@@ -1,3 +1,3 @@
 version=4
 opts=pgpsigurlmangle=s/$/.asc/ \
-https://www.namecoin.org/files/electrum-nmc/electrum-nmc-(.+)/Electrum-NMC-(.+).tar.gz
+https://www.namecoin.org/files/electrum-nmc/electrum-nmc-(.+)/Electrum-NMC-sourceonly-(.+).tar.gz
