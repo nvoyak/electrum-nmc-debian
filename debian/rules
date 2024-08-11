@@ -6,12 +6,25 @@ DEB_COPYRIGHT_CHECK_IGNORE_REGEX = ^(locale/.*/.*\.mo|data/dark/.*\.png|icons/.*
 %:
 	dh $@ --buildsystem=pybuild
 
+# This is in Electrum's package, but I'm not entirely sure what it achieves
+# Is related to debian/clear
+#execute_before_dh_auto_build::
+#	# Generate paymentrequest_pb2.py from paymentrequest.proto.
+#	contrib/generate_payreqpb2.sh
+
 override_dh_installchangelogs::
 	dh_installchangelogs -k RELEASE-NOTES
 
 execute_after_dh_auto_install::
+	# Remove duplicate
 	rm debian/tmp/usr/lib/python3*/dist-packages/electrum_nmc/electrum/plugins/revealer/DejaVuSansMono-Bold.ttf
 
+	# These don't work, I'm not sure why.
+	# Remove the unnecessary plugin README with instructions about how to contribute plugins to the project.
+	#rm debian/tmp/usr/lib/python3*/dist-packages/electrum_nmc/electrum/plugins/README
+	# Remove bundled executable in the python directory.
+	#rm debian/tmp/usr/lib/python3*/dist-packages/electrum_nmc/electrum/electrum-nmc
+
 execute_before_dh_python3::
-# The dependency is inconvenient and unnecessary (say the electrum devs, probably true!)
+	# The dependency is inconvenient and unnecessary (say the electrum package devs, probably true!)
 	sed -Ei -e '/^qdarkstyle/d' debian/python3-electrum-nmc/usr/lib/python3*/dist-packages/*.egg-info/requires.txt
