@@ -1,0 +1,38 @@
+HARDWARE WALLETS
+----------------
+
+This file is a WIP.
+
+Electrum-NMC has the option to use various hardware wallets.  Sometimes the
+hardware wallets have software dependencies that are not available in Debian.
+
+In the future, it would be nice to get all of these dependencies packaged for
+Debian.  But in the meantime, the purpose of this file is to document user
+experiences/how community members have been able to get hardware wallets
+functioning.
+
+If you have experiences with hardware wallets not listed below, please file a
+wishlist bug report with the information you would like to add.
+
+Some hardware wallets might require the installation of the python3-btchip
+package.
+
+
+Ledger <https://www.ledger.com/>
+--------------------------------
+Reports that hardware wallets based on the Ledger don't work with Electrum-NMC.
+
+
+Trezor <https://trezor.io/>
+---------------------------
+Hardware wallets that are based on the Trezor should work fine with
+Electrum-NMC, with the rather important caveat that signing name transactions
+doesn't work (due to a firmware limitation in the Trezor). Which means that if
+you transfer a name into a Trezor wallet, the name gets stuck and you can't
+renew/update/transfer it and it'll expire
+
+There is a python3-trezor package.
+
+
+ -- Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>  Sun, 11 Aug 2024 00:12:09 -0300
+
