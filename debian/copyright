@@ -3,7 +3,8 @@ Upstream-Name: electrum-nmc
 Source: https://www.namecoin.org/download/betas/
 
 Files: *
-Copyright: Electrum Team
+Copyright: 2011-2024 The Electrum Developers
+           2011-2024 Thomas Voegtlin <thomasv@gitorious>
            Namecoin developers
 License: Expat
 Comment:
@@ -13,220 +14,26 @@ Comment:
 Files: debian/*
 Copyright: Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>
            Lola Rigaut-Luczak <me@lola.ninja>
-           2013 Vasudev Kamath, Tristan Seligmann
+           2013-2024 Debian Cryptocoin Team and contributors
 License: GPL-3+
 
-Files: electrum_nmc/electrum/*
-Copyright: 2011-2015 Thomas Voegtlin
-License: Expat
+Files: debian/patches/Improve-message-about-PyQt5.patch
+Copyright: 2020 Tristan Seligmann <mithrandi@debian.org>
+License: GPL-3+
 
 Files: electrum_nmc/electrum/auxpow.py
 Copyright: 2014 Electrum-DOGE contributors
            2018 The Namecoin developers
 License: GPL-3+
 
+Files: electrum_nmc/electrum/ripemd.py
+Copyright: 2001 Markus Friedl
+           2007 Bjorn Edstrom <be@bjrn.se>
+License: BSD-2-clause
+
 Files: electrum_nmc/electrum/wordlist/portuguese.txt
 Copyright: 2014 The Monero Project
 License: BSD-3-clause
-
-Files: packages/aiohttp/*
-Copyright: aio-libs contributors
-License: Apache-2.0
-
-Files: packages/aiohttp_socks/*
-Copyright: aio-libs contributors
-License: Apache-2.0
-
-Files: packages/aiorpcx/*
-Copyright: 2018-2019,  Neil Booth
-License: Expat
-
-Files: packages/aiorpcx/curio.py
-Copyright: 2015-2017, David Beazley (Dabeaz LLC)
-License: BSD-3-clause
-
-Files: packages/async_timeout/*
-Copyright: Andrew Svetlov
-License: Apache-2.0
-
-Files: packages/attr/*
-Copyright: 2015 Hynek Schlawack and the attrs contributors
-License: Expat
-
-Files: packages/bitcointx/*
-Copyright: 2012-2018 The python-bitcoinlib developers
-           2018-2019 The python-bitcointx developers
-License: LGPL-3.0
-
-Files: packages/bitcointx/base58.py
-Copyright: 2011 Sam Rushing
-           2013-2014 The python-bitcoinlib developers
-           2018-2019 The python-bitcointx developers
-License: LGPL-3.0
-
-Files: packages/bitcointx/rpc.py
-Copyright: 2007 Jan-Klaas Kollhof
-           2011-2018 The python-bitcoinlib developers
-           2019 The python-bitcointx developers
-License: LGPL-3.0
-
-Files: packages/bitcointx/segwit_addr.py
-       packages/bitcointx/core/_ripemd160.py
-Copyright: 2017-2021 Pieter Wuille
-License: Expat
-
-Files: packages/bitcointx/core/key.py
-Copyright: 2011 Sam Rushing
-           2012-2015 The python-bitcoinlib developers
-           2018-2019 The python-bitcointx developers
-License: LGPL-3.0
-
-Files: packages/certifi/*
-Copyright: Netscape Communications Corporation 
-License: MPL-2.0
-
-Files: packages/chardet/*
-Copyright: 1998 Netscape Communications Corporation
-           Mark Pilgrim
-           Dan Blanchard (dan.blanchard@gmail.com)
-License: LGPL-2.1+
-
-Files: packages/chardet/charsetprober.py
-       packages/chardet/latin1prober.py
-       packages/chardet/sbcharsetprober.py
-       packages/chardet/sbcsgroupprober.py
-       packages/chardet/universaldetector.py
-Copyright: 2001 Netscape Communications Corporation
-           Mark Pilgrim
-           Shy Shalom
-License: LGPL-2.1+
-
-Files: packages/chardet/compat.py
-Copyright: Dan Blanchard
-           Ian Cordasco
-License: LGPL-2.1+
-
-Files: packages/chardet/hebrewprober.py
-Copyright: 2005 Shy Shalom
-           Mark Pilgrim
-License: LGPL-2.1+
-
-Files: packages/chardet/langhebrewmodel.py
-Copyright: 2005 Simon Montagu
-           Mark Pilgrim
-           Shy Shalom
-           Shoshannah Forbes
-License: LGPL-2.1+
-
-Files: packages/chardet/langturkishmodel.py
-Copyright: 1998 Netscape Communications Corporation
-           Mark Pilgrim
-           Özgür Baskın
-License: LGPL-2.1+
-
-Files: packages/chardet/mbcharsetprober.py
-       packages/chardet/mbcsgroupprober.py
-Copyright: 2001 Netscape Communications Corporation
-           Mark Pilgrim
-           Shy Shalom
-           Proofpoint, Inc.
-License: LGPL-2.1+
-
-Files: packages/colorama/*
-Copyright: 2013 Jonathan Hartley
-License: BSD-3-clause
-
-Files: packages/dns/*
-Copyright: 2001-2017 Nominum, Inc.
-           2015 Red Hat, Inc.
-           Dnspython Contributors
-License: ISC
-
-Files: packages/dns/namedict.py
-Copyright: 2001-2017 Nominum, Inc.
-           2015 Red Hat, Inc.
-           Dnspython Contributors
-           2016 Coresec Systems AB
-License: ISC
-
-Files: packages/ecdsa/*
-Copyright: 2010 Brian Warner
-License: Expat
-
-Files: packages/ecdsa/numbertheory.py
-Copyright: 2005-2006 Peter Pearson
-License: public-domain
-
-Files: packages/ecdsa/_rwlock.py
-       packages/ecdsa/test_rw_lock.py
-Copyright: 2011 Mateusz Kobos
-License: Expat
-
-Files: packages/google/*
-Copyright: 2007-2009, 2012, Google Inc.
-License: BSD-3-clause~Google
-
-Files: packages/helpdev/*
-Copyright: Daniel Cosmo Pizetta <daniel.pizetta@usp.br>
-License: Expat
-
-Files: packages/idna/*
-Copyright: 2013-2024, Kim Davies and contributors
-License: BSD-3-clause
-
-Files: packages/importlib_metadata/*
-Copyright: 2017-2019 Jason R. Coombs, Barry Warsaw
-License: Apache-2.0
-
-Files: packages/multidict/*
-Copyright: 2016 Andrew Svetlov and aio-libs contributors
-License: Apache-2.0
-
-Files: packages/pip/*
-Copyright: 2008-present The pip developers
-License: Expat
-
-Files: packages/pkg_resources/*
-       packages/setuptools/*
-Copyright: Jason R. Coombs
-License: Expat
-
-Files: packages/python_socks/*
-Copyright: Roman Snegirev
-License: Apache-2.0
-
-Files: packages/qdarkstyle/*
-Copyright: 2013-2019 Colin Duquesnoy
-License: Expat
-
-Files: packages/qrcode/*
-Copyright: 2011, Lincoln Loop
-License: BSD-3-clause~qrcode
-
-Files: packages/qtpy/*
-Copyright: 2009 The Spyder Development Team
-           2014-2015 Colin Duquesnoy
-License: Expat
-
-Files: packages/qtpy/py3compat.py
-Copyright: 2012-2013 Pierre Raybaut
-License: Expat
-
-Files: packages/wheel/*
-Copyright: 2012 Daniel Holth <dholth@fastmail.fm> and contributors
-License: Expat
-
-Files: packages/yarl/*
-Copyright: aio-libs contributors
-License: Apache-2.0
-
-Files: packages/six.py
-Copyright: 2010-2020, Benjamin Peterson
-License: Expat
-
-Files: electrum_nmc/electrum/plugins/*
-Copyright: 2014, 2015, Thomas Voegtlin
-License: Expat
 
 Files: electrum_nmc/electrum/plugins/revealer/DejaVuSansMono-Bold.ttf
 Copyright: 2003 Bitstream, Inc.
@@ -237,19 +44,26 @@ Files: electrum_nmc/electrum/plugins/revealer/SourceSansPro-Bold.otf
 Copyright: 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/)
 License: OFL
 
-License: Apache-2.0
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-     http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS"BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+License: BSD-2-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
  .
- On Debian systems, the complete text of the Apache License,
- Version 2.0 can be found in '/usr/share/common-licenses/Apache-2.0'.
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without modification, are
@@ -275,33 +89,6 @@ License: BSD-3-clause
  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
  STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
  THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-License: BSD-3-clause~Google
- Redistribution and use in source and binary forms, with or without
- modification, are permitted provided that the following conditions are
- met:
- .
-     * Redistributions of source code must retain the above copyright
- notice, this list of conditions and the following disclaimer.
-     * Redistributions in binary form must reproduce the above
- copyright notice, this list of conditions and the following disclaimer
- in the documentation and/or other materials provided with the
- distribution.
-     * Neither the name of Google Inc. nor the names of its
- contributors may be used to endorse or promote products derived from
- this software without specific prior written permission.
- .
- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
- A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
- OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
- THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 License: Expat
  Permission is hereby granted, free of charge, to any person obtaining
@@ -332,90 +119,6 @@ License: GPL-3+
  .
  On Debian systems the 'GNU General Public License' version 3 is located
  in '/usr/share/common-licenses/GPL-3'.
-
-License: LGPL-2.1+
- This program is free software; you can redistribute it and/or modify it
- under the terms of the GNU Lesser General Public License as published by the
- Free Software Foundation; version 2.1 of the License, or (at
- your option) any later version.
- .
- On Debian systems, the complete text of version 2.1 of the GNU Lesser
- General Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
-
-License: LGPL-3.0
- This package is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 3 of the License, or (at your option) any later version.
- .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
- .
- You should have received a copy of the GNU Lesser General Public
- License along with this package; if not, write to the Free Software
- Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
- . 
- On Debian systems, the complete text of the GNU Lesser General
- Public License can be found in `/usr/share/common-licenses/LGPL-3'.
-
-License: ISC
- Permission to use, copy, modify, and distribute this software and its
- documentation for any purpose with or without fee is hereby granted,
- provided that the above copyright notice and this permission notice
- appear in all copies.
- .
- THE SOFTWARE IS PROVIDED "AS IS" AND NOMINUM DISCLAIMS ALL WARRANTIES
- WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
- MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL NOMINUM BE LIABLE FOR
- ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
- WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
- ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT
- OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-
-License: BSD-3-clause~qrcode
- Redistribution and use in source and binary forms, with or without
- modification, are permitted provided that the following conditions are met:
- .
-    * Redistributions of source code must retain the above copyright notice,
-      this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above copyright notice,
-      this list of conditions and the following disclaimer in the documentation
-      and/or other materials provided with the distribution.
-    * Neither the package name nor the names of its contributors may be
-      used to endorse or promote products derived from this software without
-      specific prior written permission.
- .
- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
- ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- .
- Original text and license from the pyqrnative package where this was forked
- from (http://code.google.com/p/pyqrnative):
- .
- Ported from the Javascript library by Sam Curren
- .
- QRCode for Javascript
- http://d-project.googlecode.com/svn/trunk/misc/qrcode/js/qrcode.js
- .
- Copyright (c) 2009 Kazuhiko Arase
- .
- URL: http://www.d-project.com/
- .
- Licensed under the MIT license:
-    http://www.opensource.org/licenses/mit-license.php
- .
- The word "QR Code" is registered trademark of
- DENSO WAVE INCORPORATED
-   http://www.denso-wave.com/qrcode/faqpatent-e.html
 
 License: DejaVu
  Bitstream Vera Fonts Copyright
@@ -513,9 +216,6 @@ License: DejaVu
  from Tavmjong Bah. For further information, contact: tavmjong @ free
  . fr.
 
-License: MPL-2.0
- This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
 License: OFL
  -----------------------------------------------------------
  SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
@@ -555,3 +255,4 @@ License: OFL
  .
  DISCLAIMER
  THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.
+
