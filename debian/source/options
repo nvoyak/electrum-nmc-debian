@@ -1,0 +1,4 @@
+# Ignore auto-generated build changes to files in Electrum.egg-info.
+extend-diff-ignore = "Electrum_NMC.egg-info/PKG-INFO"
+extend-diff-ignore = "Electrum_NMC.egg-info/SOURCES.txt"
+

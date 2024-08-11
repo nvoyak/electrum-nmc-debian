@@ -1,0 +1,12 @@
+# The wordlists are used to generate the seeds.  They are not documentation.
+package-contains-documentation-outside-usr-share-doc [usr/lib/python3/dist-packages/electrum_nmc/electrum/wordlist/chinese_simplified.txt]
+package-contains-documentation-outside-usr-share-doc [usr/lib/python3/dist-packages/electrum_nmc/electrum/wordlist/english.txt]
+package-contains-documentation-outside-usr-share-doc [usr/lib/python3/dist-packages/electrum_nmc/electrum/wordlist/japanese.txt]
+package-contains-documentation-outside-usr-share-doc [usr/lib/python3/dist-packages/electrum_nmc/electrum/wordlist/portuguese.txt]
+package-contains-documentation-outside-usr-share-doc [usr/lib/python3/dist-packages/electrum_nmc/electrum/wordlist/spanish.txt]
+# I'm not really sure how to deal with this. Electrum's packaging does it
+# rather differently.
+python3-electrum-nmc: font-in-non-font-package [usr/lib/python3/dist-packages/electrum_nmc/electrum/plugins/revealer/SourceSansPro-Bold.otf]
+python3-electrum-nmc: font-outside-font-dir [usr/lib/python3/dist-packages/electrum_nmc/electrum/plugins/revealer/SourceSansPro-Bold.otf]
+python3-electrum-nmc: package-contains-documentation-outside-usr-share-doc [usr/lib/python3/dist-packages/electrum_nmc/electrum/plugins/revealer/LICENSE_DEJAVU.txt]
+python3-electrum-nmc: package-contains-documentation-outside-usr-share-doc [usr/lib/python3/dist-packages/electrum_nmc/electrum/plugins/revealer/SIL Open Font License.txt]
