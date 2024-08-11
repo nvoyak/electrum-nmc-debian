@@ -1,5 +1,6 @@
 Description: Fix aiorpcx field
 From: Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>
+Forwarded: not-needed
 
 --- a/electrum_nmc/electrum/util.py
 +++ b/electrum_nmc/electrum/util.py
@@ -11,3 +12,4 @@ From: Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>
 +        if self.joined:
              raise asyncio.CancelledError()
          return super().spawn(*args, **kwargs)
+

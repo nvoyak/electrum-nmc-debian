@@ -1,0 +1,16 @@
+Description: Inclusion unnecessary as packages/ not present.
+ There are unnecessary exclusions as well, but those seem like good practice.
+From: Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>
+Forwarded: not-needed
+
+--- a/MANIFEST.in
++++ b/MANIFEST.in
+@@ -3,8 +3,6 @@ include README.rst
+ include electrum-nmc.desktop
+ include *.py
+ include run_electrum_nmc
+-recursive-include packages *.py
+-recursive-include packages cacert.pem
+ 
+ include contrib/requirements/requirements*.txt
+ include contrib/deterministic-build/requirements*.txt
