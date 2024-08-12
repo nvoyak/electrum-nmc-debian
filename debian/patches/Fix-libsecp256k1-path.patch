@@ -1,0 +1,29 @@
+Description: Make libsecp256k1 path version agnostic
+ Point to the symlink of the latest version instead of a specific one.
+From: Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>
+
+--- a/electrum_nmc/electrum/ecc_fast.py
++++ b/electrum_nmc/electrum/ecc_fast.py
+@@ -46,8 +46,8 @@ def load_library():
+     elif 'ANDROID_DATA' in os.environ:
+         library_paths = ('libsecp256k1.so',)
+     else:  # desktop Linux and similar
+-        library_paths = (os.path.join(os.path.dirname(__file__), 'libsecp256k1.so.0'),
+-                         'libsecp256k1.so.0')
++        library_paths = (os.path.join(os.path.dirname(__file__), 'libsecp256k1.so'),
++                         'libsecp256k1.so')
+ 
+     exceptions = []
+     secp256k1 = None
+
+--- a/electrum_nmc/electrum/null_impl/maybe_null_wallet/ecc_fast.py
++++ b/electrum_nmc/electrum/null_impl/maybe_null_wallet/ecc_fast.py
+@@ -40,7 +40,7 @@ def load_library():
+     elif 'ANDROID_DATA' in os.environ:
+         library_path = 'libsecp256k1.so'
+     else:
+-        library_path = 'libsecp256k1.so.0'
++        library_path = 'libsecp256k1.so'
+ 
+     secp256k1 = ctypes.cdll.LoadLibrary(library_path)
+     if not secp256k1:

@@ -3,3 +3,4 @@ Fix-aiorpcx-field.patch
 Remove-unnecessary-inclusion.patch
 Primitive-bitcointx-workaround.patch
 Fix-generate-payreqpb2.patch
+Fix-libsecp256k1-path.patch

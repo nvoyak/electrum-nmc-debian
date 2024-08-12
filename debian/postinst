@@ -1,7 +1,0 @@
-#!/bin/sh
-set -e
-
-#DEBHELPER#
-
-# Create symbolic link for libsecp256k1. Would possibly be preferable as a patch?
-ln -sf /usr/lib/x86_64-linux-gnu/libsecp256k1.so.2.2.0 /usr/lib/x86_64-linux-gnu/libsecp256k1.so.0 || true
