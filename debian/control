@@ -7,6 +7,7 @@ Build-Depends:
  devscripts,
  dh-sequence-python3,
  libsecp256k1-2,
+ protobuf-compiler,
  pyqt5-dev-tools,
  python3,
  python3-aiohttp (>= 3.3.0),
@@ -52,6 +53,7 @@ Description: Easy to use Namecoin client - Python module
 Package: electrum-nmc
 Architecture: all
 Depends:
+ python3-setuptools,
  python3-electrum-nmc (= ${binary:Version}),
  ${misc:Depends},
  ${python3:Depends},
