@@ -6,7 +6,7 @@ Build-Depends:
  debhelper-compat (= 13),
  devscripts,
  dh-sequence-python3,
- libsecp256k1-2,
+ libsecp256k1-dev,
  protobuf-compiler,
  pyqt5-dev-tools,
  python3,
@@ -35,7 +35,7 @@ Package: python3-electrum-nmc
 Architecture: all
 Section: python
 Depends:
- libsecp256k1-2,
+ libsecp256k1-dev,
  python3-cryptography (>= 2.1),
  ${misc:Depends},
  ${python3:Depends},

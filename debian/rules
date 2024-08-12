@@ -39,3 +39,9 @@ execute_after_dh_auto_install::
 execute_before_dh_python3::
 	# The dependency is inconvenient and unnecessary (say the electrum package devs, probably true!)
 	sed -Ei -e '/^qdarkstyle/d' debian/python3-electrum-nmc/usr/lib/python3*/dist-packages/*.egg-info/requires.txt
+
+
+override_dh_gencontrol:
+	# Instead of having to manually specify libsecp256k1 version, this installs
+	# the one available based on libsecp256k1-dev dependencies
+	dh_gencontrol -- -Vlibdep="$(shell dpkg-query -f '$${Depends}' -W libsecp256k1-dev | grep -oE 'libsecp256k1-\S+')"
