@@ -1,0 +1,55 @@
+Description: "Fix" bitcointx dependency
+From: Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>
+Forwarded: not-needed
+
+--- a/electrum_nmc/electrum/commands.py
++++ b/electrum_nmc/electrum/commands.py
+@@ -69,12 +69,18 @@ from . import constants
+ 
+ import io
+ from . import ecc_fast
+-import bitcointx.util
+-# Reuse Electrum's libsecp256k1 library for bitcointx.
+-bitcointx.util._secp256k1_library_path = ecc_fast._libsecp256k1._name
+-import bitcointx.core
+-import bitcointx.core.script
+-import bitcointx.core.scripteval
++try:
++    import bitcointx.util
++    # Reuse Electrum's libsecp256k1 library for bitcointx.
++    bitcointx.util._secp256k1_library_path = ecc_fast._libsecp256k1._name
++    import bitcointx.core
++    import bitcointx.core.script
++    import bitcointx.core.scripteval
++except ImportError:
++    pass
++    bitcointx_flag = False
++else:
++    bitcointx_flag = True
+ 
+ try:
+     from .wallet import Abstract_Wallet, create_new_wallet, restore_wallet_from_text, Deterministic_Wallet
+@@ -2240,14 +2246,15 @@ class Commands:
+                 if output_tx_name_output.name_op["name"] != input_tx_name_output.name_op["name"]:
+                     raise Exception("NAME_UPDATE name mismatch to name input")
+ 
+-                bitcointx_script_sig = bitcointx.core.script.CScript(output_tx_name_input.script_sig)
+-                bitcointx_scriptpubkey = bitcointx.core.script.CScript(input_tx_name_output.scriptpubkey)
+-                bitcointx_output_tx = bitcointx.core.CTransaction.stream_deserialize(io.BytesIO(output_tx.serialize_as_bytes()))
+-                bitcointx_vin = output_tx.inputs().index(output_tx_name_input)
+-
+-                # TODO: enable CLTV+CSV, and use libnamecoinconsensus instead of the Python reimplementation.
+-                bitcointx_flags = set([bitcointx.core.scripteval.SCRIPT_VERIFY_P2SH, bitcointx.core.scripteval.SCRIPT_VERIFY_DERSIG, bitcointx.core.scripteval.SCRIPT_VERIFY_NULLDUMMY, bitcointx.core.scripteval.SCRIPT_VERIFY_WITNESS])                
+-                bitcointx.core.scripteval.VerifyScript(bitcointx_script_sig, bitcointx_scriptpubkey, bitcointx_output_tx, bitcointx_vin, bitcointx_flags)
++                if bitcointx_flag:
++                    bitcointx_script_sig = bitcointx.core.script.CScript(output_tx_name_input.script_sig)
++                    bitcointx_scriptpubkey = bitcointx.core.script.CScript(input_tx_name_output.scriptpubkey)
++                    bitcointx_output_tx = bitcointx.core.CTransaction.stream_deserialize(io.BytesIO(output_tx.serialize_as_bytes()))
++                    bitcointx_vin = output_tx.inputs().index(output_tx_name_input)
++
++                    # TODO: enable CLTV+CSV, and use libnamecoinconsensus instead of the Python reimplementation.
++                    bitcointx_flags = set([bitcointx.core.scripteval.SCRIPT_VERIFY_P2SH, bitcointx.core.scripteval.SCRIPT_VERIFY_DERSIG, bitcointx.core.scripteval.SCRIPT_VERIFY_NULLDUMMY, bitcointx.core.scripteval.SCRIPT_VERIFY_WITNESS])                
++                    bitcointx.core.scripteval.VerifyScript(bitcointx_script_sig, bitcointx_scriptpubkey, bitcointx_output_tx, bitcointx_vin, bitcointx_flags)
+ 
+             if earliest_name_output is None and len(txs_chain_verified_spv) == 1:
+                 earliest_name_outputs = [output for output in txs_chain_verified_spv[0].outputs() if output.name_op is not None]
