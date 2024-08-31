@@ -1,3 +1,11 @@
+electrum-nmc (4.0.6-2) unstable; urgency=medium
+
+  * Correction in watch file
+  * Correction in copyright file
+  * Added forwarding status to Fix-libsecp256k1-path.patch
+
+ -- Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>  Fri, 30 Aug 2024 21:38:24 -0300
+
 electrum-nmc (4.0.6-1) unstable; urgency=low
 
   * Initial Release.
@@ -5,4 +13,4 @@ electrum-nmc (4.0.6-1) unstable; urgency=low
     work.
     Closes: #1077302
 
- -- Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>  Sun, 04 Aug 2024 20:58:10 -0300
+ -- Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>  Mon, 12 Aug 2024 21:05:10 -0300

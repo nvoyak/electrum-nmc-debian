@@ -1,6 +1,7 @@
 Description: Make libsecp256k1 path version agnostic
  Point to the symlink of the latest version instead of a specific one.
 From: Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>
+Forwarded: not-needed
 
 --- a/electrum_nmc/electrum/ecc_fast.py
 +++ b/electrum_nmc/electrum/ecc_fast.py
