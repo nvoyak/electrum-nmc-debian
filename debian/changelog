@@ -1,16 +1,5 @@
-electrum-nmc (4.0.6-2) unstable; urgency=medium
-
-  * Correction in watch file
-  * Correction in copyright file
-  * Added forwarding status to Fix-libsecp256k1-path.patch
-
- -- Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>  Fri, 30 Aug 2024 21:38:24 -0300
-
 electrum-nmc (4.0.6-1) unstable; urgency=low
 
-  * Initial Release.
-  * Based on Debian Cryptocoin Team Electrum package and Lola Rigaut-Luczak's
-    work.
-    Closes: #1077302
+  * Initial Release. (Closes: #1077302)
 
- -- Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>  Mon, 12 Aug 2024 21:05:10 -0300
+ -- Nicholas Voyak <nnnnnnnnnnnn@airmail.cc>  Tue, 10 Sep 2024 01:28:46 -0300
